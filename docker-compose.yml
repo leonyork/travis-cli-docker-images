@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  travis:
+    image: leonyork/travis:${IMAGE_TAG}
+    build:
+      context: .
+      args:
+        - "RUBY_VERSION=${RUBY_VERSION}"
+        - "TRAVIS_VERSION=${TRAVIS_VERSION}"
